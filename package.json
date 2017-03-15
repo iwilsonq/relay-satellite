@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "babel-node tools/srcServer.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "nodemon --exec 'jest'"
   },
   "keywords": [],
   "author": "Ian Wilson <iwilsonq@gmail.com> (http://www.thestoicdeveloper.com/)",
@@ -29,6 +29,8 @@
     "html-webpack-plugin": "2.28.0",
     "jest": "19.0.2",
     "node-sass": "4.5.0",
+    "nodemon": "1.11.0",
+    "react-addons-test-utils": "15.4.2",
     "sass-loader": "6.0.3",
     "style-loader": "0.14.0",
     "webpack": "2.2.1",
@@ -43,5 +45,14 @@
     "react": "15.4.2",
     "react-dom": "15.4.2",
     "react-relay": "0.10.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/iwilsonq/relay-satellite"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(css|scss)$": "identity-obj-proxy"
+    }
   }
 }
